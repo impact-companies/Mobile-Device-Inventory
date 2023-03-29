@@ -12,6 +12,12 @@ const theme = createTheme({
             default: '#042D63',
             paper: '#c0cce0',
         },
+        primary: {
+            main: '#2b31a3',
+        },
+        secondary: {
+            main: '#ac0037',
+        },
     },
 });
 

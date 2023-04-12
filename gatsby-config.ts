@@ -12,7 +12,10 @@ const config: GatsbyConfig = {
   plugins: [
     {
       resolve: `gatsby-source-mongodb`,
-      options: { dbName: 'app_db', collection: `devices` },
+      options: { 
+        dbName: 'app_db', 
+        collection: `devices` 
+      },
     }
   ],
 }

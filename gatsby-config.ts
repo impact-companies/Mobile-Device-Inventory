@@ -13,7 +13,7 @@ const config: GatsbyConfig = {
     {
       resolve: `gatsby-source-mongodb`,
       options: { 
-        dbName: 'app_db', 
+        dbName: `app_db`, 
         collection: `devices` 
       },
     }

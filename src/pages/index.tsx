@@ -7,12 +7,12 @@ import { Fab, Grid } from "@mui/material"
 import AddIcon from '@mui/icons-material/Add';
 import EditIcon from '@mui/icons-material/Edit';
 
-import DataGridDemo from "../components/deviceTable";
+import DeviceTable from "../components/deviceTable";
 
 const IndexPage: React.FC<PageProps> = () => {
   return (
     <Layout>
-      <DataGridDemo />
+      <DeviceTable />
     </Layout>
   )
 }

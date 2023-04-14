@@ -5,6 +5,8 @@ import type { PageProps } from "gatsby"
 import { ThemeProvider, createTheme } from '@mui/material/styles';
 import CssBaseline from '@mui/material/CssBaseline';
 
+import Header from '../components/header';
+
 const theme = createTheme({
     palette: {
         mode: 'dark',
@@ -25,7 +27,8 @@ const Layout = ({ children }: any): JSX.Element => {
     return (
         <ThemeProvider theme={theme}>
             <CssBaseline />
-            {children}
+                <Header/>
+                {children}
         </ThemeProvider>
     )
 }

@@ -57,7 +57,7 @@ const columns: GridColDef[] = [
   }
 ];
 
-export default function DataGridDemo() {
+export default function DeviceTable() {
   
   const query = useStaticQuery(
     graphql`
@@ -111,6 +111,7 @@ export default function DataGridDemo() {
   return (
     <Box sx={{ height: 800, width: '100%' }}>
       <DataGrid
+        editMode="row"
         rows={rows}
         columns={columns}
         initialState={{

@@ -1,16 +1,20 @@
 services:
   app:
     image: node:alpine
-    command: sh -c "cd /app && npm install && sleep infinity"
+    command: sh -c "cd /workspaces/app && npm install && sleep infinity"
     ports:
-      - 8080:8080
-    working_dir: /app
+      - 8000:8000
+    working_dir: /workspaces/app
     volumes:
-      - ./:/app
+      - ./app:/workspaces/app
+    depends_on:
+      - db
 
   db: 
     image: mongo:latest
-    command: sleep infinity
+    command: mongod --bind_ip_all
+    ports:
+      - 27017:27017
     volumes:
       - db-data:/data/db
 
@@ -19,9 +23,9 @@ services:
     command: sleep infinity
     ports:
       - 3000:3000
-    working_dir: /backend
+    working_dir: /workspaces/backend
     volumes:
-      - ./backend:/backend
+      - ./backend:/workspaces/backend
 
 volumes:
   db-data:
